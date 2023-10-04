@@ -1,6 +1,15 @@
-import Image from 'next/image'
+'use client'
+import React, { useState, useEffect } from "react"
 
 export default function Home() {
+
+  const [item, setItem] = useState([
+    { name: 'Coffee', price: 4.56 },
+    { name: 'Movie', price: 24.56 },
+    { name: 'Candy', price: 74.56 },
+  ])
+
+  const [total, setTotal] = useState(0);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between sm:p-24 p-4">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm ">
